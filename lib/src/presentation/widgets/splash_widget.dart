@@ -8,8 +8,6 @@ import 'package:flutter_ktc_booking/src/domain/usecase/version_check_use_case.da
 class SplashWidget extends StatelessWidget {
   const SplashWidget({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     // Future.delayed(const Duration(seconds: 3), () {
@@ -42,9 +40,9 @@ class SplashWidget extends StatelessWidget {
     // final dataStor = await useCase.call(params: "1.0");
     // if (dataStor is DataSuccess) {
     //   print(dataStor.data);
-      Future.delayed(const Duration(seconds: 3), () {
-        Navigator.popAndPushNamed(context, KTCRoutes.home);
-      });
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.popAndPushNamed(context, KTCRoutes.home);
+    });
     // }
   }
 }

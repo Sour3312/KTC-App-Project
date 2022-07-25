@@ -31,7 +31,8 @@ class _SignInState extends State {
           actions: [
             TextButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, KTCRoutes.createBookingScreen);
+                  Navigator.pushReplacementNamed(
+                      context, KTCRoutes.createBookingScreen);
                 },
                 child: const Text(
                   "SKIP",
@@ -47,6 +48,8 @@ class _SignInState extends State {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        //===========Email ID or Mobile code here=====================
+        //===========Email ID or Mobile code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
           decoration: BoxDecoration(
@@ -70,6 +73,9 @@ class _SignInState extends State {
             style: const TextStyle(fontSize: 14.0),
           ),
         ),
+
+        //================= Password code here=====================
+        //================= Password code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           decoration: BoxDecoration(
@@ -97,6 +103,8 @@ class _SignInState extends State {
         const SizedBox(
           height: 16,
         ),
+        //================= Sign In Button code here=====================
+        //================= Sign In Button code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: TextButton(
@@ -112,12 +120,18 @@ class _SignInState extends State {
                           side: const BorderSide()))),
               child: const Text(
                 "Sign In",
-                style: TextStyle(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600),
               )),
         ),
         const SizedBox(
           height: 8.0,
         ),
+
+        //================= Forgot Password? Button code here=====================
+        //================= Forgot Password? Button code here=====================
         Container(
             margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
             child: Row(
@@ -126,7 +140,10 @@ class _SignInState extends State {
                   onTap: _forgotPassword,
                   child: const Text(
                     "Forgot Password?",
-                    style: TextStyle(fontSize: 12.0, color: KTCColors.primaryColor, fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                        fontSize: 12.0,
+                        color: KTCColors.primaryColor,
+                        fontWeight: FontWeight.w600),
                   ),
                 )
               ],
@@ -134,6 +151,9 @@ class _SignInState extends State {
         const SizedBox(
           height: 8.0,
         ),
+
+        //================= OR space code here=====================
+        //================= OR space code here=====================
         Padding(
             padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
             child: Row(
@@ -149,7 +169,8 @@ class _SignInState extends State {
                 ),
                 Text(
                   "OR",
-                  style: TextStyle(fontSize: 12.0, color: KTCColors.primaryTextColor),
+                  style: TextStyle(
+                      fontSize: 12.0, color: KTCColors.primaryTextColor),
                 ),
                 SizedBox(
                   width: 4.0,
@@ -165,6 +186,10 @@ class _SignInState extends State {
         const SizedBox(
           height: 8.0,
         ),
+
+        //================= Create New Account Button code here=====================
+        //================= Create New Account Button code here=====================
+
         Padding(
           padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: TextButton(
@@ -178,20 +203,24 @@ class _SignInState extends State {
                   borderRadius: BorderRadius.circular(4.0),
                   side: const BorderSide(color: KTCColors.darkBlueColor))),
             ),
-              child: const Text(
-                "Create New Account",
-                style: TextStyle(fontSize: 16.0, color: KTCColors.primaryColor, fontWeight: FontWeight.w600),
-              ),
+            child: const Text(
+              "Create New Account",
+              style: TextStyle(
+                  fontSize: 16.0,
+                  color: KTCColors.primaryColor,
+                  fontWeight: FontWeight.w600),
             ),
           ),
+        ),
       ],
     );
   }
+// --------------------------------------------------------------------------------------------------------------------------------
+
+  // +++++++++++++++++++ All functions are here +++++++++++++++++++
 
   void _forgotPassword() {
-  
     Navigator.pushNamed(context, KTCRoutes.forgotPasswordScreen);
-
   }
 
   void _login() {

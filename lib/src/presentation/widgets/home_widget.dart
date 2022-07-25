@@ -18,9 +18,12 @@ class HomeWidget extends StatelessWidget {
       ),
       body: Column(
         children: [
+          //===============Personal or Chauffer Driven code here================
+          //===============Personal or Chauffer Driven code here================
           Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 20.0, 16.0, 20.0),
-              child: GestureDetector(
+              child: InkWell(
+                splashColor: Colors.green,
                 child: Card(
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4))),
@@ -66,9 +69,13 @@ class HomeWidget extends StatelessWidget {
                 onTap: () =>
                     {Navigator.pushNamed(context, KTCRoutes.personalSignIn)},
               )),
+
+          //===============Corporate or Chauffer Driven code here================
+          //===============Corporate or Chauffer Driven code here================
           Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-              child: GestureDetector(
+              child: InkWell(
+                splashColor: Colors.green,
                 onTap: () => {
                   Navigator.pushNamed(context, KTCRoutes.corporateSignInWidget)
                 },

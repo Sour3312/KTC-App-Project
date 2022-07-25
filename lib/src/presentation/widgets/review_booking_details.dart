@@ -5,6 +5,8 @@ import '../../domain/entities/description.dart';
 import '../../utils/ktc_colors.dart';
 
 class ReviewBookingDetails extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In >>>> Home >> Continue Button >> ------------------
+
   const ReviewBookingDetails({Key? key}) : super(key: key);
 
   @override
@@ -33,7 +35,6 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
       physics: const ClampingScrollPhysics(),
       children: [
         Container(
-
           margin: const EdgeInsets.fromLTRB(16, 16, 16, 24),
           padding: const EdgeInsets.fromLTRB(12, 16, 12, 20),
           decoration: BoxDecoration(
@@ -101,12 +102,12 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
           children: [
             Expanded(
               child: GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.of(context).pop();
                 },
                 child: Container(
                     color: KTCColors.primaryColor,
-                    padding:  const EdgeInsets.fromLTRB(0, 13, 0, 13),
+                    padding: const EdgeInsets.fromLTRB(0, 13, 0, 13),
                     child: const Center(
                       child: Text(
                         "Edit",
@@ -115,13 +116,15 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
                     )),
               ),
             ),
-            const SizedBox(width: 1,),
+            const SizedBox(
+              width: 1,
+            ),
             Expanded(
               child: GestureDetector(
                 onTap: null,
                 child: Container(
                     color: KTCColors.primaryColor,
-                    padding:  const EdgeInsets.fromLTRB(0, 13, 0, 13),
+                    padding: const EdgeInsets.fromLTRB(0, 13, 0, 13),
                     child: const Center(
                       child: Text(
                         "Confirm",
@@ -140,7 +143,7 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
     List<Description> myList = <Description>[];
     myList.add(Description(
       title: 'Renter Name',
-      description: ': Mr Santosh Jha',
+      description: ': Mr Sourabh Kr. Mahato',
     ));
     myList.add(Description(
       title: 'Organisation Name',
@@ -148,13 +151,12 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
     ));
     myList.add(Description(
       title: 'Mobile',
-      description: ': 9999999991',
+      description: ': 8210628755',
     ));
     myList.add(Description(
       title: 'Email',
-      description: ': snato@ktc.com',
+      description: ': sourabh@gmail.com',
     ));
-
     return myList;
   }
 
@@ -165,32 +167,32 @@ class _ReviewBookingDetailsState extends State<ReviewBookingDetails> {
       description: ': Delhi',
     ));
     myList.add(Description(
-      title: 'Organisation Name',
-      description: ': CE Info Systems Ltd',
-    ));
-    myList.add(Description(
-      title: 'Mobile',
-      description: ': 9999999991',
-    ));
-    myList.add(Description(
-      title: 'Email',
-      description: ': snato@ktc.com',
+      title: 'Car Group',
+      description: ': Toyota Camry Or Similiar',
     ));
     myList.add(Description(
       title: 'Rental City',
+      description: ': City Local',
+    ));
+    myList.add(Description(
+      title: 'Reporting Date/Time',
+      description: ': 15 Jan 2022 03:20',
+    ));
+    myList.add(Description(
+      title: 'Reporting Address',
+      description: ': World Trade Park',
+    ));
+    myList.add(Description(
+      title: 'Flight/Train info.',
+      description: ': 12448',
+    ));
+    myList.add(Description(
+      title: 'Special Instruction',
       description: '',
     ));
     myList.add(Description(
-      title: 'Organisation Name',
-      description: ': CE Info Systems Ltd',
-    ));
-    myList.add(Description(
-      title: 'Mobile',
-      description: ': 9999999991',
-    ));
-    myList.add(Description(
-      title: 'Email',
-      description: ': snato@ktc.com',
+      title: 'Payment Mode ',
+      description: ': Credit Card',
     ));
 
     return myList;

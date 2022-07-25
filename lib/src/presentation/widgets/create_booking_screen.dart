@@ -32,16 +32,20 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        //=======Appbar=========
         appBar: AppBar(
           title: Image.asset('assets/images/ktc_logo.png', fit: BoxFit.cover),
         ),
         backgroundColor: KTCColors.backgroundColor,
         body: _buildBody(),
+
+        //=======Drawer=========
         drawer: Drawer(
           child: ListView(
             // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
             children: [
+              //KTC logo & cross button code here
               Container(
                 padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
                 color: KTCColors.primaryColor,
@@ -62,6 +66,7 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
                   ],
                 ),
               ),
+
               ListTile(
                 title: const Text(
                   'Home',
@@ -137,8 +142,9 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
 
   Widget _buildBody() {
     return ListView(
-      // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        //====================== Delhi N  CR code here =====================
+        //====================== Delhi N  CR code here =====================
         Container(
           margin: const EdgeInsets.fromLTRB(16, 16, 16, 17),
           padding: const EdgeInsets.fromLTRB(15, 15, 8, 15),
@@ -163,6 +169,9 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
             ],
           ),
         ),
+
+        //====================== MapmyIndia Head Office New Delhi, 237, code here =====================
+        //====================== MapmyIndia Head Office New Delhi, 237, code here =====================
         Container(
           margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
           padding: const EdgeInsets.fromLTRB(15, 15, 8, 15),
@@ -173,13 +182,16 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
           child: const Text(
             "MapmyIndia Head Office New Delhi, 237, Okh. efdh ai vu sbdviushbdvisbdivubsivbaiupsbvisuadbviusbvuisebvusbubvsuibv ipzdcbkjdvsidvisdbvibibsduiv",
             overflow: TextOverflow.ellipsis,
-            maxLines: 1,
+            maxLines: 4,
             style: TextStyle(
               color: KTCColors.secondaryTextColor,
               fontSize: 14,
             ),
           ),
         ),
+
+        //====================== Rental Type Dropdown code here =====================
+        //====================== Rental Type Dropdown code here =====================
         Container(
           margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
           padding: const EdgeInsets.fromLTRB(15, 0, 8, 0),
@@ -208,6 +220,9 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
                 color: KTCColors.secondaryTextColor, fontSize: 14),
           ),
         ),
+
+        //====================== Start Trip End Trip code here =====================
+        //====================== Start Trip End Trip code here =====================
         Container(
           margin: const EdgeInsets.fromLTRB(16, 16, 16, 12),
           padding: const EdgeInsets.fromLTRB(12, 16, 12, 9),
@@ -218,6 +233,7 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              //====================== Start Trip End Trip code here =====================
               Row(
                 children: [
                   GestureDetector(
@@ -277,18 +293,23 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
                   )
                 ],
               ),
+
               const SizedBox(
                 height: 32,
               ),
+
+              //====================== Calender code here =====================
               CalendarView(
                 defaultDateTime: DateTime.now(),
                 minDateTime: DateTime.now(),
                 onDateTimeSelected: (date) {},
                 selectedDateTime: DateTime(2022, 5, 12, 14, 30),
               ),
+
               const SizedBox(
                 height: 8,
               ),
+
               const Text(
                 "Slide to Select Date and Time",
                 textAlign: TextAlign.start,
@@ -300,6 +321,9 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
             ],
           ),
         ),
+
+        //====================== Continue Button code here =====================
+        //====================== Continue Button code here =====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: TextButton(
@@ -322,6 +346,7 @@ class _CreateBookingScreenState extends State<CreateBookingScreen> {
     );
   }
 
+  //====================== All Functions will be here =====================
   void _continue() {
     Navigator.pushNamed(context, KTCRoutes.carGroup);
     print("carGroup called");

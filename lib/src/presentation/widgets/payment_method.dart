@@ -11,6 +11,7 @@ class PaymentMethod extends StatefulWidget {
 }
 
 class _PaymentMethodState extends State<PaymentMethod> {
+  //======== Payment Code here =============
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +28,9 @@ class _PaymentMethodState extends State<PaymentMethod> {
   }
 
   Widget _buildBody() {
-    return  const WebView(
-      initialUrl: 'https://www.google.com/',
+    return const WebView(
+      initialUrl:
+          'https://dribbble.com/shots/17065240-Payment-Gateway-Light-Version',
     );
   }
 }

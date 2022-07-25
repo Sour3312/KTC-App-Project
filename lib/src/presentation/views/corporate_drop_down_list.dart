@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CorporateDropDownList extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In >>>> Home(used here) ------------------
+
   final List<Widget> children;
   final String title;
 
@@ -38,7 +40,7 @@ class _CorporateDropDownListState extends State<CorporateDropDownList>
               borderRadius: const BorderRadius.all(Radius.circular(4)),
               border: Border.all(color: const Color(0xFFE5E5E5))),
           child: ListTile(
-              title:  Text(
+              title: Text(
                 widget.title,
                 style: const TextStyle(
                   color: Color(0xFF737373),
@@ -66,6 +68,7 @@ class _CorporateDropDownListState extends State<CorporateDropDownList>
       ],
     );
   }
+
   @override
   void dispose() {
     _controller.dispose();

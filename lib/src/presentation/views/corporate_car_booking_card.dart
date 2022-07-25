@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import '../../utils/ktc_colors.dart';
 
 class CorporateCarBookingWidget extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In >>>> Approval >> pending  ------------------
+
   const CorporateCarBookingWidget({Key? key}) : super(key: key);
 
   @override
-  State<CorporateCarBookingWidget> createState() => _CorporateCarBookingWidgetState();
+  State<CorporateCarBookingWidget> createState() =>
+      _CorporateCarBookingWidgetState();
 }
 
 class _CorporateCarBookingWidgetState extends State<CorporateCarBookingWidget> {
@@ -92,33 +95,40 @@ class _CorporateCarBookingWidgetState extends State<CorporateCarBookingWidget> {
                       child: Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: const BorderRadius.all(Radius.circular(4)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(4)),
                             border: Border.all(color: const Color(0xFFE5E5E5))),
-                        child:Padding(
+                        child: Padding(
                           padding: const EdgeInsets.fromLTRB(0, 3, 0, 4),
                           child: Text(
                             "Reject",
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 12.0, color:KTCColors.primaryTextColor),
+                            style: TextStyle(
+                                fontSize: 12.0,
+                                color: KTCColors.primaryTextColor),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 4,),
+                  const SizedBox(
+                    width: 4,
+                  ),
                   Expanded(
                     child: GestureDetector(
                       child: Container(
                         decoration: BoxDecoration(
                             color: KTCColors.primaryColor,
-                            borderRadius: const BorderRadius.all(Radius.circular(4)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(4)),
                             border: Border.all(color: const Color(0xFFE5E5E5))),
-                        child:const Padding(
+                        child: const Padding(
                           padding: EdgeInsets.fromLTRB(0, 3, 0, 4),
                           child: Text(
                             "Accept",
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 12.0, color:Colors.white),
+                            style:
+                                TextStyle(fontSize: 12.0, color: Colors.white),
                           ),
                         ),
                       ),

@@ -3,15 +3,20 @@ import 'package:flutter/material.dart';
 import '../../utils/ktc_colors.dart';
 
 class CarBookingHistoryWidget extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In >>>> Approval >> Approved  ------------------
+
   const CarBookingHistoryWidget({Key? key}) : super(key: key);
 
   @override
-  State<CarBookingHistoryWidget> createState() => _CarBookingHistoryWidgetState();
+  State<CarBookingHistoryWidget> createState() =>
+      _CarBookingHistoryWidgetState();
 }
 
 class _CarBookingHistoryWidgetState extends State<CarBookingHistoryWidget> {
   @override
   Widget build(BuildContext context) {
+    // ========== History section code from My booking ==========
+
     return Container(
       margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       padding: const EdgeInsets.fromLTRB(8, 12, 8, 10),
@@ -82,7 +87,9 @@ class _CarBookingHistoryWidgetState extends State<CarBookingHistoryWidget> {
                   color: Color(0xFF555555),
                 ),
               ),
-              const SizedBox(height: 12,),
+              const SizedBox(
+                height: 12,
+              ),
             ],
           ))
         ],

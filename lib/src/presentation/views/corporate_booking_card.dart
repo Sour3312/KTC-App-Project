@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CorporateBookingCard extends StatefulWidget {
+    //--------------- Corporate >>>>> Sign In >>>> Home(used here) ------------------
+
   final List<Widget> children;
   final String title;
 

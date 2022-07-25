@@ -17,13 +17,12 @@ void main() async {
       variables: {
         "counter": 0,
         "baseUrl": "https://www.example.com",
-      }
-  );
-  runApp( MyApp());
+      });
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -32,11 +31,12 @@ class MyApp extends StatelessWidget {
       title: 'KTC India',
       onGenerateRoute: KTCRoutes.onGenerateRoutes,
       theme: ThemeData(
-          appBarTheme:
-           AppBarTheme(color: KTCColors.primaryColor, elevation: 0,),
-          brightness:  Brightness.light),
-
-      home:  HomeWidget(),
+          appBarTheme: AppBarTheme(
+            color: KTCColors.primaryColor,
+            elevation: 0,
+          ),
+          brightness: Brightness.light),
+      home: HomeWidget(),
     );
   }
 }

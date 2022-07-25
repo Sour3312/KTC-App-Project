@@ -28,6 +28,7 @@ class _CarSelectionState extends State<CarSelection> {
   }
 
   Widget _buildBody() {
+    //===============Car Selection code here================
     return ListView(
       shrinkWrap: true,
       children: [
@@ -69,8 +70,8 @@ class _CarSelectionState extends State<CarSelection> {
                     Text(
                       "Mapmyindia Head Office, 237, Okhla Industrial Estate Phase 3, Near Modi Mill, New Delhi, Delhi, 110020",
                       textAlign: TextAlign.start,
-                      style:
-                          TextStyle(fontSize: 12, color: KTCColors.secondaryTextColor1),
+                      style: TextStyle(
+                          fontSize: 12, color: KTCColors.secondaryTextColor1),
                     )
                   ],
                 ),
@@ -105,7 +106,8 @@ class _CarSelectionState extends State<CarSelection> {
                           "12-Jan-2022",
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 12, color: KTCColors.secondaryTextColor1),
+                              fontSize: 12,
+                              color: KTCColors.secondaryTextColor1),
                         ),
                       ],
                     ),
@@ -126,7 +128,8 @@ class _CarSelectionState extends State<CarSelection> {
                           "07:00PM",
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 12, color: KTCColors.secondaryTextColor1),
+                              fontSize: 12,
+                              color: KTCColors.secondaryTextColor1),
                         ),
                       ],
                     )
@@ -151,7 +154,8 @@ class _CarSelectionState extends State<CarSelection> {
                           "14-Jan-2022",
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 12, color: KTCColors.secondaryTextColor1),
+                              fontSize: 12,
+                              color: KTCColors.secondaryTextColor1),
                         ),
                       ],
                     ),
@@ -172,7 +176,8 @@ class _CarSelectionState extends State<CarSelection> {
                           "02:00AM",
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 12, color: KTCColors.secondaryTextColor1),
+                              fontSize: 12,
+                              color: KTCColors.secondaryTextColor1),
                         ),
                       ],
                     )
@@ -189,19 +194,18 @@ class _CarSelectionState extends State<CarSelection> {
             ListView.builder(
               shrinkWrap: true,
               physics: const ClampingScrollPhysics(),
-              itemCount: 4,
+              itemCount: 3,
               itemBuilder: (BuildContext context, int index) {
                 return const CarBookingWidget();
               },
             )
           ],
         ),
-
         GestureDetector(
           onTap: _continue,
           child: Container(
               color: KTCColors.primaryColor,
-              padding:  const EdgeInsets.fromLTRB(0, 13, 0, 13),
+              padding: const EdgeInsets.fromLTRB(0, 13, 0, 13),
               child: const Center(
                 child: Text(
                   "Continue",
@@ -213,8 +217,8 @@ class _CarSelectionState extends State<CarSelection> {
     );
   }
 
+//---------- Function ----------
   void _continue() {
     Navigator.pushNamed(context, KTCRoutes.bookingConformation);
   }
-
 }

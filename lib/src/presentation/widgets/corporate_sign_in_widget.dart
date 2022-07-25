@@ -4,6 +4,7 @@ import 'package:flutter_ktc_booking/src/config/routes/ktc_routes.dart';
 import 'package:flutter_ktc_booking/src/utils/ktc_colors.dart';
 
 class CorporateSignInWidget extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In ------------------
   const CorporateSignInWidget({Key? key}) : super(key: key);
 
   @override
@@ -41,6 +42,8 @@ class _SignInState extends State {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        //===========Email ID or Mobile code here=====================
+        //===========Email ID or Mobile code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
           decoration: BoxDecoration(
@@ -64,6 +67,9 @@ class _SignInState extends State {
             style: const TextStyle(fontSize: 14.0),
           ),
         ),
+
+        //================= Password code here=====================
+        //================= Password code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           decoration: BoxDecoration(
@@ -101,9 +107,13 @@ class _SignInState extends State {
             style: const TextStyle(fontSize: 14.0),
           ),
         ),
+
         const SizedBox(
           height: 16,
         ),
+
+        //================= Sign In Button code here=====================
+        //================= Sign In Button code here=====================
         Container(
           margin: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: TextButton(
@@ -125,17 +135,23 @@ class _SignInState extends State {
                     fontWeight: FontWeight.w600),
               )),
         ),
+
         const SizedBox(
           height: 24.0,
         ),
+
         const Text(
           "Registered user can Sign in with existing credentials",
           style:
               TextStyle(fontSize: 12.0, color: KTCColors.secondaryTextColor1),
         ),
+
         const SizedBox(
           height: 16.0,
         ),
+
+        //================= Forgot Password? Button code here=====================
+        //================= Forgot Password? Button code here=====================
         GestureDetector(
           onTap: () async {
             final String? email = await openDialog();
@@ -149,9 +165,13 @@ class _SignInState extends State {
                 fontWeight: FontWeight.w600),
           ),
         ),
+
         const SizedBox(
           height: 20.0,
         ),
+
+        //================= Don't have account? Register Button code here=====================
+        //================= Don't have account? Register Button code here=====================
         RichText(
           text: TextSpan(
             style: const TextStyle(
@@ -159,7 +179,7 @@ class _SignInState extends State {
               color: KTCColors.secondaryTextColor1,
             ),
             children: <TextSpan>[
-              TextSpan(text: "Don't have account? "),
+              const TextSpan(text: "Don't have account? "),
               TextSpan(
                   text: 'Register',
                   style: const TextStyle(
@@ -178,32 +198,8 @@ class _SignInState extends State {
     );
   }
 
-  void _login() {
-    FocusManager.instance.primaryFocus?.unfocus();
-    if (emailController.text.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Please Enter Email or Mobile")));
-      return;
-    }
-    if (passwordController.text.isEmpty) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Please Enter Password")));
-      return;
-    }
-
-    Navigator.pushNamed(
-      context,
-      KTCRoutes.corporateBookingScreen,
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    emailController.dispose();
-    passwordController.dispose();
-  }
-
+  //================= Forget Password DialogBox code here=====================
+  //================= Forget Password DialogBox code here=====================
   Future openDialog() => showDialog(
       context: context,
       builder: (context) => Dialog(
@@ -301,6 +297,35 @@ class _SignInState extends State {
               ),
             ),
           ));
+
+// --------------------------------------------------------------------------------------------------------------------------------
+  // +++++++++++++++++++ All functions are here +++++++++++++++++++
+
+  @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
+
+  void _login() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    if (emailController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Please Enter Email or Mobile")));
+      return;
+    }
+    if (passwordController.text.isEmpty) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text("Please Enter Password")));
+      return;
+    }
+
+    Navigator.pushNamed(
+      context,
+      KTCRoutes.corporateBookingScreen,
+    );
+  }
 
   void submit() {
     Navigator.of(context).pop(regEmailController.text);

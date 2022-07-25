@@ -41,6 +41,7 @@ class _BookingConformationState extends State<BookingConformation>
 
   @override
   Widget build(BuildContext context) {
+    //=========== Booking Confirmation code here ==================
     return Scaffold(
       appBar: AppBar(
         title: const Text("Booking Confirmation"),
@@ -262,10 +263,9 @@ class _BookingConformationState extends State<BookingConformation>
                   TextSpan(
                       text: 'Terms and Conditions',
                       style: const TextStyle(
-                        fontSize: 14,
-                        color: KTCColors.primaryColor,
-                          decoration: TextDecoration.underline
-                      ),
+                          fontSize: 14,
+                          color: KTCColors.primaryColor,
+                          decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           print('Terms and Conditions');
@@ -294,6 +294,7 @@ class _BookingConformationState extends State<BookingConformation>
     );
   }
 
+//============ Functions ============
   void _payment() {
     Navigator.pushNamed(context, KTCRoutes.paymentMethod);
   }

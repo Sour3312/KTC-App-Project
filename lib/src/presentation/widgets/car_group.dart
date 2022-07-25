@@ -29,6 +29,8 @@ class _CarGroupState extends State<CarGroup> {
   }
 
   Widget _buildBody() {
+    //===============Car Group code here================
+
     return ListView(
       children: [
         ListView.builder(
@@ -37,7 +39,7 @@ class _CarGroupState extends State<CarGroup> {
           itemCount: dataList.length,
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
-              onTap: (){
+              onTap: () {
                 _next();
               },
               child: Container(
@@ -49,7 +51,7 @@ class _CarGroupState extends State<CarGroup> {
                 ),
                 child: Row(
                   children: [
-                     Text(
+                    Text(
                       dataList[index],
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
@@ -66,6 +68,7 @@ class _CarGroupState extends State<CarGroup> {
       ],
     );
   }
+
   void _next() {
     Navigator.pushNamed(context, KTCRoutes.carSelection);
   }

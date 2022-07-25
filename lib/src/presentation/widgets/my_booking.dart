@@ -5,6 +5,8 @@ import '../../utils/ktc_colors.dart';
 import '../views/car_booking_card.dart';
 
 class MyBooking extends StatefulWidget {
+  //--------------- Corporate >> Sign In >> My Bookings ------------------
+
   const MyBooking({Key? key}) : super(key: key);
 
   @override
@@ -20,9 +22,10 @@ class _MyBookingState extends State<MyBooking> {
         child: Scaffold(
           backgroundColor: KTCColors.backgroundColor,
           resizeToAvoidBottomInset: false,
+          //===========Appbar===========
           appBar: AppBar(
             bottom: const TabBar(
-              indicatorColor: Colors.white,
+              indicatorColor: Colors.greenAccent,
               tabs: [
                 Tab(text: 'Upcoming'),
                 Tab(text: 'History'),
@@ -40,11 +43,12 @@ class _MyBookingState extends State<MyBooking> {
             backgroundColor: KTCColors.primaryColor,
           ),
           body: TabBarView(
+            //=========== Two screens code here ===========
             children: [
               ListView.builder(
                 shrinkWrap: true,
                 physics: const ClampingScrollPhysics(),
-                itemCount: 4,
+                itemCount: 2,
                 itemBuilder: (BuildContext context, int index) {
                   return const CarBookingWidget();
                 },
@@ -52,7 +56,7 @@ class _MyBookingState extends State<MyBooking> {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const ClampingScrollPhysics(),
-                itemCount: 4,
+                // itemCount: 1,
                 itemBuilder: (BuildContext context, int index) {
                   return const CarBookingHistoryWidget();
                 },

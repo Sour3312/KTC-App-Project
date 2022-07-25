@@ -7,6 +7,8 @@ import '../../config/routes/ktc_routes.dart';
 import '../views/corporate_booking_card.dart';
 
 class CorporateBookingScreen extends StatefulWidget {
+  //--------------- Corporate >>>>> Sign In >>>> Home ------------------
+
   const CorporateBookingScreen({Key? key}) : super(key: key);
 
   @override
@@ -142,8 +144,8 @@ class _CreateBookingScreenState extends State<CorporateBookingScreen>
 
   Widget _buildBody() {
     return ListView(
-      // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        //CorporateBookingCard created by me
         CorporateBookingCard(
           title: 'Other Information',
           children: [
@@ -226,6 +228,9 @@ class _CreateBookingScreenState extends State<CorporateBookingScreen>
                         assignments = assis;
                       });
                     }
+                    // else {
+                    //   CircularProgressIndicator();
+                    // }
                     print(assignments);
                   },
                   child: ListTile(
@@ -248,6 +253,7 @@ class _CreateBookingScreenState extends State<CorporateBookingScreen>
                     });
                   }
                 },
+                //==============================
                 child: Container(
                   margin: const EdgeInsets.fromLTRB(12, 0, 12, 12),
                   decoration: BoxDecoration(

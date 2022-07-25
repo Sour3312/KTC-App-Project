@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../utils/ktc_colors.dart';
 
 class UserProfile extends StatefulWidget {
+  //------------ Corporate >> Sign In >> My Profile ---------------
+
   const UserProfile({Key? key}) : super(key: key);
 
   @override
@@ -10,7 +12,9 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
-  bool editable = false;
+  //============= Profile Section code here ================
+
+  bool editable = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class _UserProfileState extends State<UserProfile> {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            icon: Icon(Icons.edit),
+            icon: const Icon(Icons.edit),
             onPressed: () {
               setState(() {
                 editable = true;
@@ -46,7 +50,6 @@ class _UserProfileState extends State<UserProfile> {
             borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
           child: TextField(
-
             autofocus: false,
             enabled: editable,
             textInputAction: TextInputAction.next,
@@ -57,7 +60,9 @@ class _UserProfileState extends State<UserProfile> {
             },
             onChanged: (value) {
               // Call setState to update the UI
-              setState(() {});
+              setState(() {
+                print("object");
+              });
             },
             decoration: const InputDecoration(
               hintText: 'test',
@@ -108,7 +113,9 @@ class _UserProfileState extends State<UserProfile> {
             textInputAction: TextInputAction.next,
             style: const TextStyle(color: Colors.black, fontSize: 14),
             keyboardType: TextInputType.emailAddress,
-            onChanged: (value) {},
+            onChanged: (value) {
+              setState(() {});
+            },
             decoration: const InputDecoration(
               hintText: 'user@gmail.com',
               icon: ImageIcon(
@@ -179,7 +186,8 @@ class _UserProfileState extends State<UserProfile> {
                 ),
                 child: TextField(
                   enabled: editable,
-                  //  cursorColor: KTCColors.primaryColor,
+                  keyboardType: TextInputType.phone,
+                  cursorColor: KTCColors.primaryColor,
                   style: const TextStyle(
                       color: KTCColors.primaryColor, fontSize: 14),
                   onChanged: (value) {
@@ -187,7 +195,7 @@ class _UserProfileState extends State<UserProfile> {
                     setState(() {});
                   },
                   decoration: const InputDecoration(
-                    hintText: '971966478522',
+                    hintText: '9719664785',
                     border: InputBorder.none,
                   ),
                 ),
@@ -195,6 +203,8 @@ class _UserProfileState extends State<UserProfile> {
             ),
           ],
         ),
+
+        //============= Save button code here ================
         editable
             ? GestureDetector(
                 onTap: () {
@@ -217,6 +227,7 @@ class _UserProfileState extends State<UserProfile> {
     );
   }
 
+  //====================== All Functions will be here ==================
   void _openDatePicker() {
     showDatePicker(
         context: context,
